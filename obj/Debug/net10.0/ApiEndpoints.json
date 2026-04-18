@@ -1,0 +1,68 @@
+[
+  {
+    "ContainingType": "SistemaDeVenda.Controllers.ContratoController",
+    "Method": "ListarContratos",
+    "RelativePath": "api/Contrato",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeVenda.Controllers.FaturaController",
+    "Method": "ListarFaturas",
+    "RelativePath": "api/Fatura",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeVenda.Controllers.RelatorioController",
+    "Method": "QuantidadeVendas",
+    "RelativePath": "api/Relatorio/quantidade-vendas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeVenda.Controllers.RelatorioController",
+    "Method": "TotalVendas",
+    "RelativePath": "api/Relatorio/total-vendas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeVenda.Controllers.VendaController",
+    "Method": "CriarVenda",
+    "RelativePath": "api/Venda",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "venda",
+        "Type": "SistemaDeVenda.Models.Venda",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeVenda.Controllers.VendaController",
+    "Method": "ListarVendas",
+    "RelativePath": "api/Venda",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
