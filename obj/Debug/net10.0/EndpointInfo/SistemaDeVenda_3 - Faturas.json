@@ -1,0 +1,27 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Faturas",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Fatura": {
+      "get": {
+        "tags": [
+          "Fatura"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { },
+  "tags": [
+    {
+      "name": "Fatura"
+    }
+  ]
+}
