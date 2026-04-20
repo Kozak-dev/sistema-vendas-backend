@@ -11,6 +11,18 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<VendaService>();
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        });
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -27,7 +39,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// ✔ Swagger 
+// Swagger 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -39,6 +51,9 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/4 - Relatorio/swagger.json", "Relatório");
     });
 }
+
+//  CORS 
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 

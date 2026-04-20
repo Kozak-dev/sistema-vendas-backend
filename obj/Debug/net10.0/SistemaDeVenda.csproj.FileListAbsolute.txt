@@ -77,3 +77,4 @@ C:\Users\Kozak\source\repos\SistemaDeVenda\SistemaDeVenda\bin\Debug\net10.0\runt
 C:\Users\Kozak\source\repos\SistemaDeVenda\SistemaDeVenda\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Kozak\source\repos\SistemaDeVenda\SistemaDeVenda\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Kozak\source\repos\SistemaDeVenda\SistemaDeVenda\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\Kozak\source\repos\SistemaDeVenda\SistemaDeVenda\obj\Debug\net10.0\SistemaDeVenda.sourcelink.json
