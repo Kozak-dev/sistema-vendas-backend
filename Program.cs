@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-   options.UseInMemoryDatabase("BancoVendas"));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
 
 builder.Services.AddScoped<VendaService>();
 
@@ -23,6 +25,7 @@ builder.Services.AddCors(options =>
         });
 });
 
+// 🔥 SWAGGER COM GRUPOS (CORRETO)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -30,6 +33,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("2 - Contratos", new() { Title = "Contratos", Version = "v1" });
     c.SwaggerDoc("3 - Faturas", new() { Title = "Faturas", Version = "v1" });
     c.SwaggerDoc("4 - Relatorio", new() { Title = "Relatório", Version = "v1" });
+    c.SwaggerDoc("5 - Auth", new() { Title = "Auth", Version = "v1" });
 
     c.DocInclusionPredicate((docName, apiDesc) =>
     {
@@ -39,7 +43,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Swagger 
+// Swagger
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -49,10 +53,11 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/2 - Contratos/swagger.json", "Contratos");
         c.SwaggerEndpoint("/swagger/3 - Faturas/swagger.json", "Faturas");
         c.SwaggerEndpoint("/swagger/4 - Relatorio/swagger.json", "Relatório");
+        c.SwaggerEndpoint("/swagger/5 - Auth/swagger.json", "Auth");
     });
 }
 
-//  CORS 
+// CORS
 app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
